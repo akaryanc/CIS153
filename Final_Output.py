@@ -133,3 +133,5 @@ Button(root, text='Results', command=most_cat_submit, width=20,bg="black",fg='wh
 
 
 root.mainloop()
+
+input('Press ENTER to exit')

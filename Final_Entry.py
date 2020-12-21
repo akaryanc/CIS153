@@ -75,3 +75,5 @@ Button(root, text='Submit', command = submit, width=20,bg="black",fg='white').pl
 
 
 root.mainloop()
+
+input('Press ENTER to exit')
