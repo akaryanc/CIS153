@@ -6,14 +6,14 @@ root = Tk()
 def submit():
     game=entry_1.get()
     money=entry_2.get()
-    type=entry_3.get()
+    category=entry_3.get()
     date=entry_4.get()
     enter_data = open('gameincome.txt', 'a')
     enter_data.write(str(game))
     enter_data.write(' :: ')
     enter_data.write(str(money))
     enter_data.write(' :: ')
-    enter_data.write(str(type))
+    enter_data.write(str(category))
     enter_data.write(' :: ')
     enter_data.write(str(date))
     enter_data.write('\n')
@@ -25,8 +25,8 @@ except:
     gameincome = open('gameincome.txt', 'w')
 
 
-root.geometry('500x500')
-root.title('Games Income')
+root.geometry('500x600')
+root.title('Games Income Entry')
 
 
 label_0 = Label(root,text="Game Income Reporting", width=20,font=("bold",20))
@@ -36,10 +36,10 @@ label_0.place(x=90,y=60)
 label_1 = Label(root,text="Which Game?", width=20,font=("bold",10))
 label_1.place(x=60,y=130)
 
-list_of_games=[ 'Pick a Duck' , 'Coin Drop' , 'Ballon Pop' ,'Gone Fishing' , 'Bean Bag Toss']
+list_of_games=[ 'Pick_a_Duck' , 'Coin_Drop' , 'Balloon_Pop' , 'Gone_Fishing' , 'Bean_Bag_Toss']
 
 entry_1=StringVar()
-droplist=OptionMenu(root,entry_1, *list_of_games)
+droplist=OptionMenu(root, entry_1, *list_of_games)
 droplist.config(width=15)
 entry_1.set('Choose a Game')
 droplist.place(x=240,y=125)
